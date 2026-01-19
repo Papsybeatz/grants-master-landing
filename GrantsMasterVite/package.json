@@ -1,0 +1,43 @@
+{
+  "name": "the-grants-master",
+  "version": "1.0.0",
+  "description": "Modular agentic workflow engine for grant writing and SaaS deployment.",
+  "main": "dist/index.js",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "build:agents": "esbuild src/index.js --bundle --platform=node --outfile=dist/index.js",
+    "build:frontend": "cd app/frontend && npm run build",
+    "build:backend": "cd app/backend && npm run build",
+    "deploy:vercel": "vercel --prod",
+    "deploy:railway": "railway up",
+    "deploy:bundle": "tar -czvf grants-master-bundle.tar.gz dist app",
+    "backend": "node server.js",
+    "test": "jest tests/api",
+    "test:e2e": "playwright test tests/e2e"
+  },
+  "dependencies": {
+    "@prisma/client": "^7.2.0",
+    "cors": "^2.8.5",
+    "dayjs": "^1.11.19",
+    "express": "^5.2.1",
+    "react": ">=18.0.0",
+    "react-dom": "^19.2.3",
+    "react-router-dom": "^7.11.0",
+    "uuid": "^13.0.0"
+  },
+  "peerDependencies": {
+    "react": ">=18.0.0"
+  },
+  "keywords": [
+    "agents",
+    "workflow-engine",
+    "grant-writing",
+    "ai-saas"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "@vitejs/plugin-react": "^5.1.2",
+    "vite": "^7.3.1"
+  }
+}
