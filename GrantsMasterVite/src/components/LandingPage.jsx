@@ -65,6 +65,15 @@ function LandingPageContent(props) {
     {
       label: 'Pricing',
       content: (
+            {
+              label: 'Contact',
+              content: (
+                <div className={styles.contactTab}>
+                  {/* Inline the ContactSalesPage component for direct rendering */}
+                  {require('./ContactSalesPage').default()}
+                </div>
+              )
+            },
         <div className={styles.pricingTab}>
           <h2>Plans & Pricing</h2>
           <div className={styles.pricingGrid}>
@@ -163,7 +172,12 @@ function LandingPageContent(props) {
   }
 
   return (
-    <div className={styles.tabContainer}>
+    <>
+      {/* Language Selector always visible */}
+      <div style={{ position: 'absolute', top: 16, right: 24, zIndex: 1000 }}>
+        {require('./LanguageSelector').default()}
+      </div>
+      <div className={styles.tabContainer}>
       {/* Debug banner */}
       <div style={{ background: 'yellow', padding: '10px' }}>
         React is live — activeTab: {activeTab}
@@ -197,7 +211,8 @@ function LandingPageContent(props) {
       <div className={styles.faqWrapper} style={{ margin: '3rem 0 2rem 0' }}>
         <FAQsSection />
       </div>
-    </div>
+      </div>
+    </>
   );
 }
 
