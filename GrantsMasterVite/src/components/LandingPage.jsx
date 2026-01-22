@@ -73,8 +73,7 @@ function LandingPageContent(props) {
               <p><b>$0/mo</b></p>
               <ul>
                 <li>5 drafts per month</li>
-                <li>Basic validator</li>
-                <li>1 team seat</li>
+                <li>Basic validator access</li>
               </ul>
               <button className={styles.pricingButton} onClick={() => navigate('/signup')}>Start Free</button>
             </div>
@@ -82,33 +81,49 @@ function LandingPageContent(props) {
               <h3>Starter</h3>
               <p><b>$19.99/mo</b></p>
               <ul>
-                <li>15 drafts per month</li>
-                <li>Standard validator</li>
+                <li>5 drafts per month</li>
+                <li>Downloadable proposals</li>
                 <li>1 team seat</li>
+                <li>Basic validator access</li>
               </ul>
-              <button className={styles.pricingButton} onClick={() => navigate('/upgrade/starter')}>Upgrade to Starter</button>
+              <button className={styles.pricingButton} onClick={() => navigate('/upgrade/starter')}>Upgrade</button>
             </div>
             <div className={styles.pricingCard}>
               <h3>Pro</h3>
               <p><b>$49/mo</b></p>
               <ul>
-                <li>Unlimited drafts</li>
-                <li>Advanced validator</li>
-                <li>5 team seats</li>
-                <li>Analytics & agent refinement</li>
+                <li>Unlimited grant drafts</li>
+                <li>Advanced agent guidance</li>
+                <li>Analytics dashboard</li>
+                <li>Priority support</li>
               </ul>
-              <button className={styles.pricingButton} onClick={() => navigate('/upgrade')}>Upgrade to Pro</button>
+              <button className={styles.pricingButton} onClick={() => navigate('/upgrade')}>Upgrade</button>
             </div>
             <div className={styles.pricingCard}>
-              <h3>Agency</h3>
+              <h3>Agency Starter</h3>
+              <p><b>$79/mo</b></p>
+              <ul>
+                <li>Up to 10 seats</li>
+                <li>Unlimited drafts</li>
+                <li>Up to 5 client workspaces</li>
+                <li>White-label proposals</li>
+                <li>Analytics dashboard</li>
+                <li>Priority support</li>
+              </ul>
+              <button className={styles.pricingButton} onClick={() => navigate('/upgrade/agency-starter')}>Upgrade</button>
+            </div>
+            <div className={styles.pricingCard}>
+              <h3>Agency Unlimited</h3>
               <p><b>$249/mo</b></p>
               <ul>
+                <li>Unlimited seats</li>
                 <li>Unlimited drafts</li>
-                <li>Advanced validator</li>
-                <li>Unlimited team seats</li>
-                <li>Analytics & agent refinement</li>
+                <li>Unlimited client workspaces</li>
+                <li>Full white-label</li>
+                <li>Advanced analytics</li>
+                <li>Priority support + onboarding</li>
               </ul>
-              <button className={styles.pricingButton} onClick={() => navigate('/contact/agency')}>Contact</button>
+              <button className={styles.pricingButton} onClick={() => navigate('/contact/agency')}>Upgrade</button>
             </div>
           </div>
         </div>
