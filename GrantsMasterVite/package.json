@@ -22,8 +22,10 @@
     "cors": "^2.8.5",
     "dayjs": "^1.11.19",
     "express": "^5.2.1",
+    "i18next": "^25.8.0",
     "react": ">=18.0.0",
     "react-dom": "^19.2.3",
+    "react-i18next": "^16.5.3",
     "react-router-dom": "^7.11.0",
     "uuid": "^13.0.0"
   },
