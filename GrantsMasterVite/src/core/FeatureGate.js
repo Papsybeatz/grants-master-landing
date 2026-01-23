@@ -1,5 +1,7 @@
+
 // FeatureGate.js
 // Tier-based feature gating for The Grants Master
+import { trackEvent } from './Analytics';
 
 const TIER_PERMISSIONS = {
   free: {
@@ -89,7 +91,6 @@ export function gateFeature({ tier, feature, usage, onBlock, onUpgrade, user, on
     // Analytics instrumentation
     if (typeof window !== 'undefined') {
       try {
-        const { trackEvent } = require('./Analytics');
         if (typeof user !== 'undefined') trackEvent('feature_blocked', { feature, tier }, user);
       } catch (e) {}
     }
@@ -104,7 +105,6 @@ export function gateFeature({ tier, feature, usage, onBlock, onUpgrade, user, on
     if (onUpgrade) {
       if (typeof window !== 'undefined') {
         try {
-          const { trackEvent } = require('./Analytics');
           if (typeof user !== 'undefined') trackEvent('upgrade_clicked', { feature, tier }, user);
         } catch (e) {}
       }
