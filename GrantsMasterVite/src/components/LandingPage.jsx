@@ -1,5 +1,6 @@
+
+
 import React from "react";
-import ContactSalesPage from './ContactSalesPage';
 import LanguageSelector from './LanguageSelector';
 
 const FeatureCard = ({ title, description }) => (
@@ -227,35 +228,25 @@ const LandingPage = () => {
           </div>
         </section>
 
-        {/* CONTACT & FAQ */}
-        <section id="contact" className="border-t border-slate-200 bg-white">
+        {/* FAQ */}
+        <section id="faq" className="border-t border-slate-200 bg-white">
           <div className="mx-auto max-w-5xl px-4 py-14 md:py-18">
-            <div className="flex flex-col gap-10 md:flex-row md:items-start md:justify-between">
-              {/* Contact */}
-              <div className="max-w-md">
-                <ContactSalesPage />
-              </div>
-
-              {/* FAQ */}
-              <div className="w-full max-w-md">
-                <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
-                  FAQs
-                </h3>
-                <div className="mt-4 space-y-3">
-                  <FaqItem
-                    question="Is GrantsMaster a replacement for human grant writers?"
-                    answer="No. It’s a force multiplier—helping teams move faster, explore more opportunities, and polish drafts before submission."
-                  />
-                  <FaqItem
-                    question="Can small nonprofits really use the free plan?"
-                    answer="Yes. The free tier is designed specifically so small, under‑resourced organizations can still access quality drafts."
-                  />
-                  <FaqItem
-                    question="Do you support agencies and consultants?"
-                    answer="Absolutely. Agency plans include multiple seats, client workspaces, and white‑label options."
-                  />
-                </div>
-              </div>
+            <h3 className="text-sm font-semibold uppercase tracking-wide text-slate-500">
+              FAQs
+            </h3>
+            <div className="mt-4 space-y-3">
+              <FaqItem
+                question="Is GrantsMaster a replacement for human grant writers?"
+                answer="No. It’s a force multiplier—helping teams move faster, explore more opportunities, and polish drafts before submission."
+              />
+              <FaqItem
+                question="Can small nonprofits really use the free plan?"
+                answer="Yes. The free tier is designed specifically so small, under‑resourced organizations can still access quality drafts."
+              />
+              <FaqItem
+                question="Do you support agencies and consultants?"
+                answer="Absolutely. Agency plans include multiple seats, client workspaces, and white‑label options."
+              />
             </div>
           </div>
         </section>
@@ -276,5 +267,4 @@ const LandingPage = () => {
 };
 
 export default LandingPage;
-
 
